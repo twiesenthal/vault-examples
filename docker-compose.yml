@@ -1,0 +1,25 @@
+version: '2'
+services:
+  vault:
+    image: vault
+    ports:
+      - "8200:8200"
+    links:
+      - mysql-vault-test1
+      - mysql-vault-test2
+    cap_add:
+      - IPC_LOCK
+    environment:
+      - 'VAULT_LOCAL_CONFIG={"backend": {"file": {"path": "/vault/file"}}, "default_lease_ttl": "24h", "max_lease_ttl": "240h"}'
+    volumes:
+      - ./data:/vault/file
+
+  mysql-vault-test1:
+    image: mysql:5.7
+    environment:
+      - 'MYSQL_ROOT_PASSWORD=root'
+
+  mysql-vault-test2:
+    image: mysql:5.7
+    environment:
+      - 'MYSQL_ROOT_PASSWORD=root'
