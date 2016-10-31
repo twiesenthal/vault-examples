@@ -36,7 +36,7 @@ It will also show how to use response  wrapping to let ```vault``` take care of 
 # Further reading
   - [cli](https://www.vaultproject.io/docs/commands/index.html)
   - [http api](https://www.vaultproject.io/docs/http/index.html)
-  - [backend reference](https://www.vaultproject.io/docs/config/)
+  - [configuration](https://www.vaultproject.io/docs/config/) (go here to find infos about storage backends)
   - [secret backends](https://www.vaultproject.io/docs/secrets/index.html)
   - [auth backends](https://www.vaultproject.io/docs/auth/index.html)
   - [audit backends](https://www.vaultproject.io/docs/audit/index.html)
