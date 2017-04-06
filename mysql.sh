@@ -5,7 +5,7 @@ echo -e "\n\e[32mMounting first mysql\e[39m"
 vault mount -path /mysql/local-docker mysql 1>/dev/null
 echo -e "\n\t\e[32m- Setting up connection first\e[39m"
 vault write  /mysql/local-docker/config/connection \
-  connection_url="root:root@tcp(vault_mysql-vault-test1_1:3306)/" 1>/dev/null
+  connection_url="root:root@tcp(vaultexample_mysql1:3306)/" 1>/dev/null
 echo -e "\t\e[32m- Creating mysql role\e[39m"
 vault write mysql/local-docker/roles/usage-user \
   sql="CREATE USER '{{name}}'@'%' IDENTIFIED BY '{{password}}';GRANT USAGE ON *.* TO '{{name}}'@'%';" 1>/dev/null
@@ -17,7 +17,7 @@ echo -e "\n\e[32mMounting second mysql\e[39m"
 vault mount -path /mysql/local-docker-other mysql 1>/dev/null
 echo -e "\n\t\e[32m- Setting up connection first\e[39m"
 vault write  /mysql/local-docker-other/config/connection \
-  connection_url="root:root@tcp(vault_mysql-vault-test2_1:3306)/" 1>/dev/null
+  connection_url="root:root@tcp(vaultexample_mysql2:3306)/" 1>/dev/null
 echo -e "\t\e[32m- Creating mysql role\e[39m"
 vault write mysql/local-docker-other/roles/usage-user \
   sql="CREATE USER '{{name}}'@'%' IDENTIFIED BY '{{password}}';GRANT USAGE ON *.* TO '{{name}}'@'%';" 1>/dev/null

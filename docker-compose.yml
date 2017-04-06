@@ -2,6 +2,7 @@ version: '2'
 services:
   vault:
     image: vault
+    container_name: vaultexample_vault
     ports:
       - "8200:8200"
     links:
@@ -16,10 +17,12 @@ services:
 
   mysql-vault-test1:
     image: mysql:5.7
+    container_name: vaultexample_mysql1
     environment:
       - 'MYSQL_ROOT_PASSWORD=root'
 
   mysql-vault-test2:
     image: mysql:5.7
+    container_name: vaultexample_mysql2
     environment:
       - 'MYSQL_ROOT_PASSWORD=root'
