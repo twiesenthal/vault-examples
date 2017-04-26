@@ -21,17 +21,17 @@ This script starts all needed docker containers and outputs the export calls to 
 You can also run ```$(./up.sh)``` to export the variables directly.
 
 ## down.sh
-This script removed the containers and all files created by vault.
+This script removes the containers and all files created by vault.
 
 ## policies.sh
-This script demonstrates how to write policies and craete tokes for those policies using the cli. The rules used to create the policies can be fould in the ```hcl/``` folder.
+This script demonstrates how to write policies and how to create tokes for those policies using the cli. The rules used to create the policies can be fould in the ```hcl/``` folder.
 
 ## mysql.sh
 This script shows how to mount mysql databases as secret backends into vault and how to retrieve credentials using those backends.
 
 ## onetime-secret-tokens.sh
 This script shows how to create a token that is only valid for one request and how vault behaves when the token is used more than once.
-It will also show how to use response  wrapping to let ```vault``` take care of the limiting.
+It will also show how to use response  wrapping to let vault take care of the limiting.
 
 # Further reading
   - [cli](https://www.vaultproject.io/docs/commands/index.html)
