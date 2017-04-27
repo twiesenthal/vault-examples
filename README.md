@@ -13,7 +13,9 @@ This example shows how to :
   - mysql.sh
   - onetime-secret-token.sh
 
-In order to run this example you need [```docker-compose```](www.docker.com) and [```vault```](www.vaultproject.io) installed on you machine
+In order to run this example you need [```docker-compose```](www.docker.com) and [```vault```](www.vaultproject.io) installed on you machine.
+
+The scripts output all executed commands so you do not need to look into the scripts to see what is getting executed.
 
 # Scripts
 ## up.sh
