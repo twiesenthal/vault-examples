@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 SLEEP=20
 
 >&2 echo "#Creating ./data if it doesn't exists"
